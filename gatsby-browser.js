@@ -1,4 +1,4 @@
-import "node_modules/normalize.css/normalize.css";
+import "normalize.css";
 import "./styles/typebase.css";
 import "./styles/theme.css";
 import "./styles/apidocs.css";
