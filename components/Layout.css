@@ -86,6 +86,7 @@ footer {
 .search:focus-within {
   padding-left: var(--leading);
   grid-column-start: logo;
+  z-index: 2;
 }
 
 .theme-switch {
