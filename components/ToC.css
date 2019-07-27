@@ -34,7 +34,3 @@ nav.toc > ul {
 nav.toc li {
   line-height: var(--small-line-height);
 }
-
-nav.toc li.children:not(:first-child) {
-  margin-top: var(--small-leading);
-}
