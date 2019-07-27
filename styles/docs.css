@@ -166,9 +166,16 @@ p.target:before {
   --code-block-border-radius: 0;
 }
 
+li {
+  --code-block-border-radius: 0.5em 0 0 0.5em;
+}
+
 @media (min-width: 768px) {
   :root {
     --code-block-border-radius: 0 0.5em 0.5em 0;
+  }
+  li {
+    --code-block-border-radius: 0.5em;
   }
 }
 
