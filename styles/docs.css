@@ -13,13 +13,13 @@ article > p:first-of-type {
 
 figure {
   width: 100%;
-  margin: calc(var(--leading)) 0 calc(2 * var(--leading));
+  margin: calc(var(--leading)) 0;
 }
 
 figcaption {
   font-style: italic;
   text-align: center;
-  margin: calc(var(--leading)) auto;
+  margin: calc(var(--leading)) auto calc(2 * var(--leading));
 }
 
 /* Section anchor links */
@@ -143,6 +143,8 @@ section:target > h5:not(:hover):before,
 section:target > h6:not(:hover):before,
 code.target:before,
 code:target:before,
+li.target:before,
+li:target:before,
 p:target:before,
 p.target:before {
   font-size: 0.9rem;
