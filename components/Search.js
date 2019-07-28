@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, navigate } from "gatsby";
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import ReactDOM from "react-dom";
-import useDebounce from "react-use/lib/useDebounce";
+import { useDebounce } from "./useDebounce.js";
 import { runFuzzySort, resultsByPage } from "./fuzzysearch.js";
 
 // Simple data stores for exchanging state data between the main search component
