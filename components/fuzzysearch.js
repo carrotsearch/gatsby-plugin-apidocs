@@ -179,7 +179,7 @@ export const runFuzzySort = (query, data, maxParagraphResults = 10, maxParagraph
   }, []);
 };
 
-const getHeading = r => r.type === "heading" ? r.searchable : r.parents[r.parents.length - 1];
+const getHeading = r => r.type === "heading" || r.type === "figure" ? r.searchable : r.parents[r.parents.length - 1];
 
 const reorderResultsByHeading = resultsByPage => {
   const byHeading = resultsByPage.map(r => ({ heading: getHeading(r), results: [] }));
