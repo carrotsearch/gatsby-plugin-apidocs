@@ -18,8 +18,13 @@ figure {
 
 figcaption {
   font-style: italic;
-  text-align: center;
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
   margin: calc(var(--leading)) auto calc(2 * var(--leading));
+}
+
+figcaption p {
+  margin-top: var(--small-leading);
 }
 
 /* Section anchor links */

@@ -68,8 +68,11 @@ html {
 }
 /* Copy & Lists */
 
-p {
+body {
   line-height: var(--leading);
+}
+
+p {
   margin-top: var(--leading);
   margin-bottom: 0;
 }
@@ -79,10 +82,6 @@ ol {
   margin-bottom: var(--leading);
   padding-inline-start: var(--leading);
 }
-ul li,
-ol li {
-  line-height: var(--leading);
-}
 ul ul,
 ol ul,
 ul ol,
@@ -91,7 +90,6 @@ ol ol {
   margin-bottom: 0;
 }
 article .warning {
-  line-height: var(--leading);
   margin-top: var(--leading);
   margin-bottom: var(--leading);
 }
@@ -106,7 +104,6 @@ h6 {
   /* Change heading typefaces here */
   margin-top: var(--leading);
   margin-bottom: 0;
-  line-height: var(--leading);
 }
 h1 {
   font-size: var(--h1-font-size);
