@@ -213,7 +213,7 @@ nav.main > ul, nav.toc > ul {
   .logo svg {
     height: 1.7em;
   }
-  .logo > span {
+  .logo span {
     font-size: 1.5em;
     display: unset !important;
   }
