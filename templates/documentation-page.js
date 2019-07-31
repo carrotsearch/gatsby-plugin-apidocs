@@ -28,7 +28,7 @@ export default ({ data, location }) => {
       // Replace regular links with Gatsby links for proper handling
       // of prefix path and performance improvements (prefetching).
       if (name === "a" && attribs.href && attribs.href.startsWith("/")) {
-        return <Link to={attribs.href}>{domToReact(children, parserOptions)}</Link>
+        return <Link to={attribs.href} className={attribs.class || ""}>{domToReact(children, parserOptions)}</Link>;
       }
 
       // Build time
@@ -49,7 +49,7 @@ export default ({ data, location }) => {
   };
   const articleElement = parse(article.html, parserOptions);
   const footerElement = footer && footer.length > 0 ? parse(footer, parserOptions) : null;
-  const logoElement = logo && logo.length > 0 ? parse(logo) : null;
+  const logoElement = logo && logo.length > 0 ? parse(logo, parserOptions) : null;
   return (
     <Layout articleId={articleId} location={location} data={data}
             footer={footerElement} logo={logoElement}>
