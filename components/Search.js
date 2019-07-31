@@ -1,7 +1,7 @@
 import { faSearch, faCode, faExclamationTriangle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faImage } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, navigate } from "gatsby";
+import { Link, navigate, withPrefix } from "gatsby";
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import ReactDOM from "react-dom";
 import { useDebounce } from "./useDebounce.js";
@@ -122,7 +122,7 @@ const SearchInput = ({ onQueryChange }) => {
 };
 
 function isInternalNavigation(result, location) {
-  return result.url.startsWith(location.pathname);
+  return withPrefix(result.url).startsWith(location.pathname);
 }
 
 // When the search result loads new content, the whole component
@@ -138,8 +138,8 @@ const hideResultsOnInternalNavigation = (result, location) => {
 const isElementInViewport = element => {
   const rect = element.getBoundingClientRect();
   return rect.top >= 0 && rect.left >= 0 &&
-         rect.bottom <= window.innerHeight &&
-         rect.right <= window.innerWidth;
+    rect.bottom <= window.innerHeight &&
+    rect.right <= window.innerWidth;
 };
 
 // Browsers won't apply the :target CSS pseudo class on location.pushState,
@@ -268,8 +268,8 @@ export const SearchResultList = ({ location }) => {
       let node = e.target;
       while (node) {
         if (node.classList &&
-            (node.classList.contains("SearchResultList") ||
-             node.classList.contains("SearchInputInput"))) {
+          (node.classList.contains("SearchResultList") ||
+            node.classList.contains("SearchInputInput"))) {
           return;
         }
         node = node.parentNode;
@@ -465,12 +465,12 @@ const SearchResultListSection = ({ results, resultsByPage,
               </td>
               <td className="results">
                 <ul>
-                {
-                  page.results.map((r) =>
-                    <SearchResult key={r.url} result={r} location={location}
-                                  active={r === activeResult} />)
+                  {
+                    page.results.map((r) =>
+                      <SearchResult key={r.url} result={r} location={location}
+                                    active={r === activeResult} />)
 
-                }
+                  }
                 </ul>
               </td>
             </tr>
