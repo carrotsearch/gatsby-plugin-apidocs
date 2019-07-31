@@ -276,4 +276,8 @@ dd p:first-child {
     padding-left: 11em;
     margin: 0 0 var(--leading) 0;
   }
+
+  .gatsby-highlight > pre[class*="language-"] {
+    white-space: pre-wrap;
+  }
 }
