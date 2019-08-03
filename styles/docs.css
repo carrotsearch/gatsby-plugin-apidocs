@@ -35,6 +35,7 @@ figcaption p {
   --padding-scale: 0.1;
   opacity: 0;
   position: relative;
+  z-index: 1;
 }
 .anchor path {
   fill: var(--text-color);
@@ -135,6 +136,9 @@ ul, ol {
 ul ul, ol ol, ul ol, ol ul {
   --target-marker-margin-left: calc(-3 * var(--leading));
 }
+code {
+  --target-marker-margin-left: calc(-1.2 * var(--leading));
+}
 
 section.target > h2:not(:hover):before,
 section.target > h3:not(:hover):before,
@@ -157,6 +161,10 @@ p.target:before {
   position: absolute;
   margin-left: var(--target-marker-margin-left);
   margin-top: -0.15rem;
+}
+code.target:before,
+code:target:before {
+  margin-top: 0;
 }
 
 .info p:target:before,
