@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
+
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown.js";
 
 const Chapter = ({ chapter, active, activate, articleId }) => {
   return (

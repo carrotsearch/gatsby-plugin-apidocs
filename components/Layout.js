@@ -3,8 +3,9 @@ import { ThemeSwitch } from "./ThemeSwitch.js";
 import { Search, SearchResultList } from "./Search.js";
 import { Navigation } from "./Navigation.js";
 
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars.js";
+import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes.js";
 
 export const MenuButton = ({ icon , onClick, className }) => {
   return (

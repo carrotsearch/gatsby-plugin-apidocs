@@ -1,8 +1,14 @@
-import { faSearch, faCode, faExclamationTriangle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { faImage } from "@fortawesome/free-regular-svg-icons";
+import React from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
+
+import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch.js";
+import { faCode } from "@fortawesome/free-solid-svg-icons/faCode.js";
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons/faExclamationTriangle.js";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons/faInfoCircle.js";
+import { faImage } from "@fortawesome/free-regular-svg-icons/faImage.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Link, navigate, withPrefix } from "gatsby";
-import React, { useEffect, useRef, useState, useMemo } from "react";
 import ReactDOM from "react-dom";
 import { useDebounce } from "./useDebounce.js";
 import { runFuzzySort, resultsByPage } from "./fuzzysearch.js";
