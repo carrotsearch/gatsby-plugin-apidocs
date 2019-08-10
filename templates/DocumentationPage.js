@@ -74,7 +74,7 @@ export const DocumentationPage = ({pageData, location}) => {
       // Add previous/next article navigation at the bottom of the article.
       if (name === "article") {
         return (
-          <article>
+          <article className={attribs.class || ""}>
             {domToReact(children, parserOptions)}
             <PrevNextArticle articleId={articleId} pages={data.allHtml} navigation={navigation} />
           </article>
