@@ -277,15 +277,22 @@ dd > p:first-child {
 }
 
 @media (min-width: 768px) {
+  dl { --dl-indent: 10em; }
+  dl.narrow { --dl-indent: 5em; }
+
+  dl.compact > dd {
+    margin-bottom: calc(0.25 * var(--leading));
+  }
+
   dt {
     float: left;
-    width: 10em;
+    width: var(--dl-indent);
     word-wrap: break-word;
     text-align: right;
   }
 
   dd {
-    padding-left: 11em;
+    padding-left: calc(var(--dl-indent) + 1em);
     margin: 0 0 var(--leading) 0;
   }
 
