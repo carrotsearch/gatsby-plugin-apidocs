@@ -262,13 +262,17 @@ article .api > h3 {
 }
 
 /** Definition lists */
+dt {
+  font-weight: bold;
+}
+
 dd {
   margin-left: var(--leading);
   margin-bottom: var(--leading);
   margin-top: calc(0.25 * var(--leading));
 }
 
-dd p:first-child {
+dd > p:first-child {
   margin-top: 0;
 }
 
