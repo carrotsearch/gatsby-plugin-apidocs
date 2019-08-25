@@ -179,10 +179,11 @@ export const runFuzzySort = (query, data, maxParagraphResults = 10, maxParagraph
   }, []);
 };
 
-const getHeading = r => r.type === "heading" || r.type === "figure" ? r.searchable : r.parents[r.parents.length - 1];
+const getHeadingForIndex = r => r.type === "heading" || r.type === "figure" ?
+  r.searchable + r.url : r.parents[r.parents.length - 1];
 
 const reorderResultsByHeading = resultsByPage => {
-  const byHeading = resultsByPage.map(r => ({ heading: getHeading(r), results: [] }));
+  const byHeading = resultsByPage.map(r => ({ heading: getHeadingForIndex(r), results: [] }));
   const headingIndex = byHeading.reduce((map, h) => {
     map.set(h.heading, h);
     return map;
@@ -190,7 +191,7 @@ const reorderResultsByHeading = resultsByPage => {
 
 
   resultsByPage.forEach(r => {
-    const forHeading = headingIndex.get(getHeading(r));
+    const forHeading = headingIndex.get(getHeadingForIndex(r));
     r.headless = !r.class.includes("image") && !r.class.includes("example") &&
       forHeading.results.length > 0;
     forHeading.results.push(r);
