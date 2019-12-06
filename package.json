@@ -8,7 +8,10 @@
     "gatsby-plugin",
     "documentation"
   ],
-  "repository": "https://github.com/carrotsearch/gatsby-plugin-apidocs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carrotsearch/gatsby-plugin-apidocs.git"
+  },
   "bugs": {
     "url": "https://github.com/carrotsearch/gatsby-plugin-apidocs/issues"
   },
@@ -45,5 +48,7 @@
     "@babel/preset-react": "^7.0.0",
     "shelljs": "^0.8.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/carrotsearch/gatsby-plugin-apidocs#readme",
+  "author": ""
 }
