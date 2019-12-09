@@ -96,9 +96,7 @@ const SearchInput = ({ onQueryChange }) => {
         e.preventDefault();
         visibility.setVisible(true);
       }
-      return;
     }
-    interactions.trigger(e);
   };
 
   useEffect(() => {
