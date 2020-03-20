@@ -167,10 +167,12 @@ code:target:before {
   margin-top: 0;
 }
 
+.box p:target:before,
+.box p.target:before,
 .info p:target:before,
 .info p.target:before,
 .warning p:target:before,
-.info p.target:before {
+.warning p.target:before {
   left: calc(-0.75 * var(--leading));
 }
 
@@ -228,6 +230,7 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
 }
 
 /** Warning box */
+article .box,
 article .warning {
   background-color: var(--warning-background-color);
   border-left-color: var(--warning-border-color);
@@ -238,13 +241,17 @@ article .warning {
   padding: var(--leading);
   overflow: hidden; /** prevent margin collapsing */
 }
+article .box > p:last-child,
 article .warning > p:last-child {
   padding-bottom: var(--leading);
 }
+article .container .box,
 article .container .warning {
   margin: var(--leading) 0;
 }
 
+article .box .gatsby-highlight > code[class*="language-"],
+article .box .gatsby-highlight > pre[class*="language-"],
 article .warning .gatsby-highlight > code[class*="language-"],
 article .warning .gatsby-highlight > pre[class*="language-"] {
   margin-left: 0;
