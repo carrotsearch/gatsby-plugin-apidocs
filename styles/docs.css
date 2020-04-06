@@ -154,6 +154,8 @@ code.target:before,
 code:target:before,
 li.target:before,
 li:target:before,
+dt.target:before,
+dt:target:before,
 p:target:before,
 p.target:before {
   font-size: 0.9rem;
