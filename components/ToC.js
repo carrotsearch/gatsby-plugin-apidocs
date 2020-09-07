@@ -10,7 +10,7 @@ export const ToC = ({ toc }) => {
       {
         toc.map(e => (
           <li key={e.anchor} className={e.sections ? "children" : ""}>
-            <a href={`#${e.anchor}`}>{e.heading}</a>
+            <a href={`#${e.anchor}`} title={e.heading}>{e.heading}</a>
             {
               e.sections ? <ToC toc={e.sections} /> : null
             }

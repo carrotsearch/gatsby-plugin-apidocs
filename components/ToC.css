@@ -3,7 +3,7 @@ nav.toc {
   padding-top: calc(var(--leading) * 3.4);
   font-size: var(--small-font-size);
   grid-area: toc;
-  right: 0;
+  padding-right: var(--leading);
 }
 
 nav.toc a {
@@ -33,4 +33,6 @@ nav.toc > ul {
 
 nav.toc li {
   line-height: var(--small-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
