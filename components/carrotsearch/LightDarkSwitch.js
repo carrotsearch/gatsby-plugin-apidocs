@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 export function LightDarkSwitch(props) {
   return (
     <span className="LightDarkSwitch">
-      <input className="tgl tgl-ios" id="theme" type="checkbox" tabIndex="0"
+      <input className="tgl tgl-ios" id="apidocs-theme-switch-input" type="checkbox" tabIndex="0"
              checked={props.dark} onChange={props.onChange} />
-      <label className="tgl-btn" htmlFor="theme"
+      <label className="tgl-btn" htmlFor="apidocs-theme-switch-input"
              title={`Switch to ${props.dark ? 'light' : 'dark'} theme`} />
     </span>
   );
