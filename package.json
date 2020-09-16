@@ -1,7 +1,7 @@
 {
   "name": "@carrotsearch/gatsby-plugin-apidocs",
   "description": "A Gatsby plugin for creating functional and responsive API documentation websites.",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "main": "dist/index.js",
   "keywords": [
     "gatsby",
