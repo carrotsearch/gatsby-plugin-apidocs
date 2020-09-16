@@ -452,37 +452,38 @@ const SearchResultListHints = () => {
 
 const SearchResultListSection = ({ results, resultsByPage,
                                    activeResult, location }) => {
-  if (results.length === 0) {
-    return <div className="NoResults">No matching results</div>;
-  }
+  return useMemo(() => {
+    if (results.length === 0) {
+      return <div className="NoResults">No matching results</div>;
+    }
+    return (
+        <table>
+          <tbody>
+          {
+            resultsByPage.map(page => (
+                <tr key={page.title}>
+                  <td className="page">
+                    <ul>
+                      <li>{page.title}</li>
+                    </ul>
+                  </td>
+                  <td className="results">
+                    <ul>
+                      {
+                        page.results.map((r) =>
+                            <SearchResult key={r.url} result={r} location={location}
+                                          active={r === activeResult} />)
 
-  return useMemo(() => (
-    <table>
-      <tbody>
-        {
-          resultsByPage.map(page => (
-            <tr key={page.title}>
-              <td className="page">
-                <ul>
-                  <li>{page.title}</li>
-                </ul>
-              </td>
-              <td className="results">
-                <ul>
-                  {
-                    page.results.map((r) =>
-                      <SearchResult key={r.url} result={r} location={location}
-                                    active={r === activeResult} />)
-
-                  }
-                </ul>
-              </td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  ), [ results, resultsByPage, activeResult, location ] );
+                      }
+                    </ul>
+                  </td>
+                </tr>
+            ))
+          }
+          </tbody>
+        </table>
+    );
+  }, [ results, resultsByPage, activeResult, location ] );
 };
 
 export const Search = ({ headings }) => {
