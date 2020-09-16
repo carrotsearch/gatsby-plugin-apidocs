@@ -8,8 +8,10 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown.j
 const Chapter = ({ chapter, active, activate, articleId }) => {
   return (
     <li className={active ? "active" : null}>
-      <button className="link" onClick={() => activate(chapter)}>{chapter.title}</button>
-      <FontAwesomeIcon icon={faChevronDown} />
+      <button className="link" onClick={() => activate(chapter)}>
+        {chapter.title}
+        <FontAwesomeIcon icon={faChevronDown} />
+      </button>
       <ul>
         {
           chapter.articles.map(article => {

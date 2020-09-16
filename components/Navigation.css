@@ -32,7 +32,7 @@ nav.main > ul > li:not(:first-child) {
 nav.main > ul > li.active > button.link {
   color: var(--text-color-muted);
 }
-nav.main > ul > li > .fa-chevron-down {
+nav.main > ul > li > button > .fa-chevron-down {
   display: none;
 }
 nav.main > ul > li > ul {
@@ -63,7 +63,7 @@ nav.main > ul > li > ul > li.active {
   }
 
   /** Collapsible menu only on larger screens */
-  nav.main > ul > li > .fa-chevron-down {
+  nav.main > ul > li > button > .fa-chevron-down {
     display: unset;
     height: calc(1px * var(--base-font-size) / var(--scale));
     margin-left: 0.25em;
@@ -72,7 +72,7 @@ nav.main > ul > li > ul > li.active {
     transition: transform 0.2s;
     opacity: 0.6;
   }
-  nav.main > ul > li.active > .fa-chevron-down {
+  nav.main > ul > li.active > button > .fa-chevron-down {
     transform: rotate(0);
     opacity: 1.0;
   }
