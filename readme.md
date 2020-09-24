@@ -1,4 +1,4 @@
- A Gatsby plugin that implements the [APIDocs](https://github.com/carrotsearch/gatsby-starter-apidocs) user interface, including navigation menus, search box, logo and footer customization options.
+# Deprecated, use APIDocs theme
  
-See [`gatsby-starter-apidocs`](https://github.com/carrotsearch/gatsby-starter-apidocs) for usage example
-and documentation.
+ 
+APIdocs is now a [`Gatsby theme`](https://github.com/carrotsearch/gatsby-theme-apidocs).
